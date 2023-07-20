@@ -1,9 +1,11 @@
 // app.js
 const express = require('express');
 const db = require('./db');
+const cors = require('cors');
 
 const app = express();
-const port = 3000; // Choose any available port
+const port = 3600; 
+app.use(cors());
 
 app.get('/api/data', (req, res) => {
   const sqlQuery = 'SELECT * FROM user_details'; // Replace 'your_table_name' with the name of your table
